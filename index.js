@@ -84,7 +84,7 @@
 
     const button = document.createElement("a");
 
-    button.href = "subpic.html";
+    button.href = "subpic001.html";
 
     button.className = "regnas-button";
 
@@ -92,7 +92,7 @@
 
     button.innerHTML = `
         <img
-            src="subpic_char/btn_preview.png"
+            src="subpic_index/btn_preview.png"
             alt="返回主页"
         >
     `;

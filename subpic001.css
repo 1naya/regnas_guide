@@ -68,92 +68,71 @@ body::before {
 
 
 /* ==========================================================================
-   3. 右上角按钮容器
+   3. 页面一级菜单
    ========================================================================== */
 
-.top-buttons {
+.page-menu {
     position: fixed;
-
-    top: 24px;
     right: 24px;
-
+    bottom: 18%;
     z-index: 999;
 
-    display: flex;
+    width: 190px;
+    padding: 12px 0;
 
+    display: flex;
     flex-direction: column;
 
-    align-items: flex-end;
-
-    gap: 10px;
-}
-
-
-/* ==========================================================================
-   4. 返回按钮
-   ========================================================================== */
-
-.back-home-btn {
-    display: inline-flex;
-
-    align-items: center;
-
-    gap: 8px;
-
-    background: rgba(248, 244, 240, 0.85);
-
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
+    background: rgba(248, 244, 240, 0.90);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 
     border: 1px solid rgba(194, 24, 7, 0.15);
+    border-radius: 10px;
 
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.07);
+}
+
+.page-menu-link,
+.page-menu-action {
+    display: block;
     padding: 8px 15px;
 
-    border-radius: 8px;
-
     text-decoration: none;
+    color: #7a6e67;
 
-    color: #c21807;
-
-    font-size: 13px;
-
+    font-size: 12px;
     font-weight: 700;
+    line-height: 1.4;
+    letter-spacing: 0.3px;
 
-    letter-spacing: 0.5px;
-
-    box-shadow:
-        0 4px 15px rgba(0, 0, 0, 0.03);
-
-    transition:
-        all 0.3s cubic-bezier(
-            0.25,
-            0.46,
-            0.45,
-            0.94
-        );
-
-    text-align: right;
+    transition: all 0.2s ease;
 }
 
-.back-home-btn:hover {
-    background: #e53935;
+.page-menu-link span {
+    display: block;
+    margin-top: 1px;
 
-    color: #ffffff;
-
-    border-color: #e53935;
-
-    transform: translateX(-4px);
-
-    box-shadow:
-        0 6px 20px rgba(229, 57, 53, 0.15);
+    color: #baa79c;
+    font-size: 10px;
+    font-weight: 600;
 }
 
-.back-icon {
-    font-size: 16px;
+.page-menu-link:hover,
+.page-menu-action:hover {
+    color: #c21807;
+    background: rgba(229, 57, 53, 0.07);
 }
 
-.back-text {
-    line-height: 1.35;
+.page-menu-divider {
+    height: 1px;
+    margin: 7px 14px;
+    background: rgba(194, 24, 7, 0.15);
+}
+
+.page-menu-action {
+    font-size: 11px;
+    color: #99867a;
 }
 
 
@@ -349,6 +328,67 @@ body::before {
     color: #7a6e67;
 
     line-height: 1.7;
+}
+
+
+.photo-toggle {
+    width: 100%;
+    min-height: 46px;
+    margin-top: 16px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+
+    padding: 10px 15px;
+
+    border: 1px solid rgba(194, 24, 7, 0.22);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.48);
+
+    color: #c21807;
+    font: inherit;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-align: left;
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+}
+
+.photo-toggle:hover {
+    background: rgba(229, 57, 53, 0.08);
+    border-color: rgba(194, 24, 7, 0.38);
+}
+
+.photo-toggle:active {
+    transform: translateY(1px);
+}
+
+.photo-toggle-icon {
+    flex: 0 0 auto;
+    width: 24px;
+    height: 24px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid rgba(194, 24, 7, 0.22);
+    border-radius: 50%;
+
+    font-size: 18px;
+    line-height: 1;
+}
+
+.location-section:not(.is-expanded) .photo-grid {
+    display: none;
+}
+
+.location-section.is-expanded .photo-toggle {
+    margin-bottom: 0;
 }
 
 
@@ -787,6 +827,29 @@ body::before {
 
 @media (min-width: 600px) {
 
+    .page-menu {
+        right: 12px;
+        bottom: 10%;
+        width: min(190px, calc(100vw - 24px));
+    }
+
+    .page-menu-link,
+    .page-menu-action {
+        padding: 7px 13px;
+    }
+
+    .photo-toggle {
+        min-height: 50px;
+        padding: 11px 14px;
+        font-size: 13px;
+    }
+
+    .photo-toggle-icon {
+        width: 28px;
+        height: 28px;
+        font-size: 20px;
+    }
+
     .subpic-page-container {
         padding:
             120px
@@ -811,6 +874,29 @@ body::before {
    ========================================================================== */
 
 @media (min-width: 1024px) {
+
+    .page-menu {
+        right: 12px;
+        bottom: 10%;
+        width: min(190px, calc(100vw - 24px));
+    }
+
+    .page-menu-link,
+    .page-menu-action {
+        padding: 7px 13px;
+    }
+
+    .photo-toggle {
+        min-height: 50px;
+        padding: 11px 14px;
+        font-size: 13px;
+    }
+
+    .photo-toggle-icon {
+        width: 28px;
+        height: 28px;
+        font-size: 20px;
+    }
 
     .subpic-page-container {
         padding:
@@ -862,25 +948,29 @@ body::before {
 
 @media (max-width: 599px) {
 
-    .top-buttons {
-        top: 12px;
-
-        right: 12px;
-
-        gap: 7px;
+    /* 手机上将一级菜单移到左下方，避开主要阅读区域 */
+    .page-menu {
+        left: 10px;
+        right: auto;
+        bottom: 2%;
+        width: min(170px, calc(100vw - 20px));
     }
 
-    .back-home-btn {
-        padding:
-            6px 12px;
-
-        font-size: 11px;
-
-        gap: 6px;
+    .page-menu-link,
+    .page-menu-action {
+        padding: 7px 13px;
     }
 
-    .back-icon {
-        font-size: 14px;
+    .photo-toggle {
+        min-height: 50px;
+        padding: 11px 14px;
+        font-size: 13px;
+    }
+
+    .photo-toggle-icon {
+        width: 28px;
+        height: 28px;
+        font-size: 20px;
     }
 
     .subpic-page-container {

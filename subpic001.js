@@ -8,7 +8,7 @@
    subpic.css
    subpic.js
 
-   subpic/
+   subpic001/
        001-001.png
        001-002.png
        002-001.png
@@ -45,18 +45,18 @@ const IMAGE_EXTENSION = "webp";
  * 但是对应的实际图片已经从服务器删除时，
  * 自动显示这张图。
  */
-const OCCUPIED_IMAGE = "subpic/occupied.webp";
+const OCCUPIED_IMAGE = "subpic001/occupied.webp";
 
 
 /*
  * 实际图片所在的文件夹。
  */
-const IMAGE_FOLDER = "subpic";
+const IMAGE_FOLDER = "subpic001/";
 
 
 
 // ==========================================================================
-// 2. 【你需要修改的拍摄数据】
+// 2. 【需要修改的拍摄数据】
 // ==========================================================================
 //
 // 照片现在支持两种写法。
@@ -147,38 +147,22 @@ const SUBPIC_DATA = {
      */
     page: {
 
-        title: "拍摄预览",
+        title: "拍摄计划",
 
-        subtitle: "Photo Preview",
+        subtitle: "Photo Plan",
 
         description:
-            "这几张是试拍的预览，选个你喜欢的，我们找个时间开拍！"+"Here are the test shots—pick your favorite and let's shoot!"
+            "这几张是试拍的计划，选个你喜欢的，我们找个时间开拍！"+"Here are the test shots—pick your favorite and let's shoot!"
 
     },
 
 
-    /*
-     * 地点列表。
-【主城地图开始】
-出生酒馆（一圈什么都没有，往上走就是炼金，炼金旁边是织造）梦开始的地方-dreamstart
-→ 开拓局广场 pioneerBureau→（穿过）中央街区（什么都没有，有个美容商人但是UI里就有）centralDistrict
-→ 出城城门（街门广场）townGateSquare → 【第一次战斗地点，可以去打个羊】
-→ 原路走大门回来 → 绕一下天纹广场celestinePlaza → 欢乐街（entertainment district）炼金行会／幻想商人Alchemy →织造weaving→ 【这里可回去旅馆一下反正路过】→91线酒馆theSpinningRudder （欢乐街这片基本都在了）→ 议会 oceanHill奥香山→【直接跳到了蒂娜回溯本】【可以考虑先回去一趟，或者从天文广场下去】
-→ （跳到）工匠协会ArtisanGuild（钓鱼协会，协会也在这里，码头有个货船）下半镇port Town港口镇
-→ 地下街区Underground District → 神殿 shrineArea → 副本入口 unit x research facility未知机体调查处
-→ 上半段小镇arena town亚利那镇 （什么都没，只有sdm和，第一次集体照的地方，defense corp‘s camp守备兵团营地）
-→然后就剩下海滩没去了asterleeds beach
-【主城地图结束】
-
-
-
-     */
     locations: [
 
         {
-            id: "000",
+            id: "001",
 
-            name: "地点速览 | 阿斯特里斯",
+            name: "地图总览 - 阿斯特里斯 | Asteris Views",
 
             description:
                 "纯风景，不含人！ 想帮我拍张更好的记得叫我！"
@@ -190,15 +174,34 @@ const SUBPIC_DATA = {
 
                 
 "000-001",
-//"000-002",
+"000-002",
 {file: "000-002a-Reia",name: "Reia (国际服 / NA) 000-002"} ,
-"000-003","000-004","000-005","000-006","000-007","000-008","000-009","000-010","000-011","000-012","000-013","000-014","000-015","000-016","000-017","000-018","000-019","000-020","000-021","000-022","000-023","000-024","000-025","000-026","000-027","000-028","000-029","000-030","000-031",
+"000-003",
+{file: "000-003a-Himari",name: "Himari (国服 / CN) 000-003"} ,
+"000-004","000-005","000-006","000-007","000-008","000-009",
+"000-010",
+{file: "000-010a-Himari",name: "Himari (国服 / CN) 000-010"} ,
+"000-011","000-012","000-013","000-014","000-015","000-016","000-017","000-018","000-019","000-020","000-021","000-022","000-023","000-024",
+"000-025",
+{file: "000-025a-Himari",name: "Himari (国服 / CN) 000-025"} ,
+"000-026",
+{file: "000-026a-Himari",name: "Himari (国服 / CN) 000-026"} ,
+"000-027","000-028","000-029","000-030","000-031",
 {file: "000-032a-Reia",name: "Reia (国际服 / NA) 000-032"} ,
-"000-033","000-034","000-035","000-036","000-037","000-038","000-039","000-040","000-041","000-042","000-043","000-044","000-045","000-046","000-047","000-048","000-049","000-050","000-051",
+"000-033","000-034","000-035","000-036","000-037","000-038",
+"000-039",
+{file: "000-039a-Himari",name: "Himari (国服 / CN) 000-039"} ,
+"000-040","000-041","000-042","000-043","000-044","000-045","000-046","000-047","000-048","000-049","000-050",
+"000-051",
+{file: "000-051a-Himari",name: "Himari (国服 / CN) 000-051"} ,
+{file: "000-051b-Himari",name: "Himari (国服 / CN) 000-051"} ,
 "000-052",
 {file: "000-052a-Reia",name: "Reia (国际服 / NA) 000-052"} ,
 {file: "000-052b-Reia",name: "Reia (国际服 / NA) 000-052"} ,
-"000-053","000-054","000-055","000-056","000-057","000-058","000-059","000-060","000-061","000-062","000-063","000-064","000-065","000-066","000-067","000-068","000-069","000-070","000-071","000-072","000-073"
+"000-053","000-054","000-055","000-056","000-057",
+"000-058",
+{file: "000-058a-Himari",name: "Himari (国服 / CN) 000-058"} ,
+"000-059","000-060","000-061","000-062","000-063","000-064","000-065","000-066","000-067","000-068","000-069","000-070","000-071","000-072","000-073"
                  
 
 
@@ -209,9 +212,9 @@ const SUBPIC_DATA = {
 
 
         {
-            id: "001",
+            id: "",
 
-            name: "阿斯特里斯 | ASTERIS",
+            name: "同框的瞬间 | Familiar Faces",
 
             description:
                 "这里是梦开始的地方，挑选一个你喜欢的地点，穿上你最漂亮的衣服来和我合影吧！。"
@@ -227,39 +230,21 @@ const SUBPIC_DATA = {
 
 
         {
-            id: "002",
+            id: "",
 
-            name: "地点二",
+            name: "远方传来的回响 | Hearts from Afar",
 
             description:
                 "这里是地点二的说明。",
 
             photos: [
 
-                "002-001",
+                "101-001",
 
 
             ]
 
         },
-
-
-        {
-            id: "003",
-
-            name: "地点三",
-
-            description:
-                "这里是地点三的说明。",
-
-            photos: [
-
-                "003-001",
-
-
-            ]
-
-        }
 
     ]
 
@@ -286,28 +271,28 @@ const SUBPIC_DATA = {
 const CHARACTER_SHOWCASE_DATA = {
 
     background:
-        "subpic_char/bg.webp",
+        "subpic_char001/bg.webp",
 
     /* 主人物胶片：固定前三人。 */
     fixed: [
-        "subpic_char/1.webp",
-        "subpic_char/2.webp",
-        "subpic_char/3.webp"
+        "subpic_char001/1.webp",
+        "subpic_char001/2.webp",
+        "subpic_char001/3.webp"
     ],
 
     /* 主人物胶片：随机池。每轮不重复。 */
     pool: [
-        "subpic_char/4.webp",
-        "subpic_char/5.webp",
+        "subpic_char001/4.webp",
+        "subpic_char001/5.webp",
 
     ],
 
     /* 顶部 Badge。以后可以换成独立的 badge 图片。 */
     badgePool: [
-        "subpic_char/icon.webp",
-        "subpic_char/icon2.webp",
-        "subpic_char/icon3.webp",
-        "subpic_char/icon4.webp",
+        "subpic_char001/icon.webp",
+        "subpic_char001/icon2.webp",
+        "subpic_char001/icon3.webp",
+        "subpic_char001/icon4.webp",
     ],
 
     /* 人物与人物之间的视觉间距。 */
@@ -317,8 +302,8 @@ const CHARACTER_SHOWCASE_DATA = {
     badgeGap: 25,
 
     /* 当前速度基本保持不变。 */
-    characterSpeed: 92,
-    badgeSpeed: 48,
+    characterSpeed: 48,
+    badgeSpeed: 92,
 
     /* 右边近、左边远。 */
     rightScale: 1.05,
@@ -1094,7 +1079,7 @@ function animateBadgeFilm(timestamp) {
 function createCharacterShowcaseSection() {
 
     return `
-        <section class="character-showcase-section" aria-label="角色展示">
+        <section id="character-showcase" class="character-showcase-section" aria-label="角色展示">
 
             <div class="character-showcase-header">
                 <div class="character-showcase-title">
@@ -1406,7 +1391,7 @@ function normalizePhoto(photo) {
  *
  * 会变成：
  *
- *     subpic/001-001.png
+ *     subpic001/001-001.png
  *
  *
  * 注意：
@@ -1622,7 +1607,7 @@ function createPhotoCard(photo) {
 // 6. 创建地点区域
 // ==========================================================================
 
-function createLocationSection(location) {
+function createLocationSection(location, locationIndex) {
 
     const locationId =
         escapeHTML(
@@ -1672,6 +1657,7 @@ function createLocationSection(location) {
     return `
 
         <section
+            id="location-${String(locationIndex + 1).padStart(3, "0")}"
             class="location-section"
             data-location-id="${locationId}"
         >
@@ -1721,6 +1707,11 @@ function createLocationSection(location) {
 
                         : ""
                 }
+
+                <button class="photo-toggle" type="button" aria-expanded="false">
+                    <span class="photo-toggle-text">展开照片 / Expand Photos</span>
+                    <span class="photo-toggle-icon" aria-hidden="true">＋</span>
+                </button>
 
             </header>
 
@@ -2205,6 +2196,59 @@ function setupLightbox() {
 
 
 // ==========================================================================
+// 11.5. 照片栏目展开 / 收起
+// ==========================================================================
+
+function setupPhotoSectionToggles() {
+
+    const sections =
+        document.querySelectorAll(".location-section");
+
+    sections.forEach(function (section) {
+
+        const button =
+            section.querySelector(".photo-toggle");
+
+        const grid =
+            section.querySelector(".photo-grid");
+
+        if (!button || !grid) {
+            return;
+        }
+
+        button.addEventListener("click", function () {
+
+            const expanded =
+                section.classList.toggle("is-expanded");
+
+            button.setAttribute(
+                "aria-expanded",
+                String(expanded)
+            );
+
+            const text =
+                button.querySelector(".photo-toggle-text");
+
+            const icon =
+                button.querySelector(".photo-toggle-icon");
+
+            if (text) {
+                text.textContent = expanded
+                    ? "收起照片 / Collapse Photos"
+                    : "展开照片 / Expand Photos";
+            }
+
+            if (icon) {
+                icon.textContent = expanded ? "−" : "＋";
+            }
+
+        });
+
+    });
+}
+
+
+// ==========================================================================
 // 12. 渲染整个页面
 // ==========================================================================
 
@@ -2230,8 +2274,8 @@ function renderSubpicPage() {
             ? SUBPIC_DATA.locations
             : [];
 
-    locations.forEach(function (location) {
-        html += createLocationSection(location);
+    locations.forEach(function (location, locationIndex) {
+        html += createLocationSection(location, locationIndex);
     });
 
     if (locations.length === 0) {
@@ -2247,6 +2291,7 @@ function renderSubpicPage() {
 
     setupImageFallbacks();
     setupPhotoClicks();
+    setupPhotoSectionToggles();
     initCharacterShowcase();
 }
 
