@@ -71,6 +71,19 @@ body::before {
    3. 页面一级菜单
    ========================================================================== */
 
+.page-menu-toggle-input {
+    display: none;
+}
+
+.page-menu-toggle-button {
+    display: none;
+}
+
+.page-menu-content {
+    display: flex;
+    flex-direction: column;
+}
+
 .page-menu {
     position: fixed;
     right: 24px;
@@ -948,12 +961,51 @@ body::before {
 
 @media (max-width: 599px) {
 
-    /* 手机上将一级菜单移到左下方，避开主要阅读区域 */
+    /* 手机上恢复为可展开的二级菜单，尽量减少对阅读区域的遮挡 */
     .page-menu {
         left: 10px;
         right: auto;
-        bottom: 2%;
+        bottom: 4%;
         width: min(170px, calc(100vw - 20px));
+        padding: 0;
+        overflow: hidden;
+    }
+
+    .page-menu-toggle-button {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 42px;
+        padding: 9px 12px;
+        cursor: pointer;
+        color: #7a6e67;
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 1.4;
+        letter-spacing: 0.3px;
+        user-select: none;
+    }
+
+    .page-menu-toggle-icon {
+        font-size: 18px;
+        line-height: 1;
+        transition: transform 0.2s ease;
+    }
+
+    .page-menu-content {
+        display: none;
+    }
+
+    .page-menu-toggle-input:checked + .page-menu .page-menu-content {
+        display: flex;
+    }
+
+    .page-menu-toggle-input:checked + .page-menu .page-menu-toggle-icon {
+        transform: rotate(45deg);
+    }
+
+    .page-menu-toggle-button:active {
+        background: rgba(229, 57, 53, 0.07);
     }
 
     .page-menu-link,

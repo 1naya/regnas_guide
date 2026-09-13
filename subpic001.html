@@ -9,14 +9,22 @@
 
 <body>
 
+    <input type="checkbox" id="page-menu-toggle" class="page-menu-toggle-input" aria-label="打开页面目录">
     <nav class="page-menu" aria-label="页面目录">
-        <a href="#character-showcase" class="page-menu-link">角色剪影 <span>Characters</span></a>
-        <a href="#location-001" class="page-menu-link">地图总览 <span>Asteris Views</span></a>
-        <a href="#location-002" class="page-menu-link">同框的瞬间 <span>Familiar Faces</span></a>
-        <a href="#location-003" class="page-menu-link">远方传来的回响 <span>Hearts from Afar</span></a>
-        <div class="page-menu-divider"></div>
-        <a href="/index.html" class="page-menu-action">← 返回档案主页 / Home Page</a>
-        <a href="/index.html#message-board" class="page-menu-action">✦ 投稿点这里 / Share Your Photos</a>
+        <label for="page-menu-toggle" class="page-menu-toggle-button" aria-hidden="true">
+            <span>☰ 目录 / Menu</span>
+            <span class="page-menu-toggle-icon">＋</span>
+        </label>
+
+        <div class="page-menu-content">
+            <a href="#character-showcase" class="page-menu-link">角色剪影 <span>Characters</span></a>
+            <a href="#location-001" class="page-menu-link">地图总览 <span>Asteris Views</span></a>
+            <a href="#location-002" class="page-menu-link">同框的瞬间 <span>Familiar Faces</span></a>
+            <a href="#location-003" class="page-menu-link">远方传来的回响 <span>Hearts from Afar</span></a>
+            <div class="page-menu-divider"></div>
+            <a href="/index.html" class="page-menu-action">← 返回档案主页 / Home Page</a>
+            <a href="/index.html#message-board" class="page-menu-action">✦ 投稿点这里 / Share Your Photos</a>
+        </div>
     </nav>
 
     <main class="subpic-page-container">
